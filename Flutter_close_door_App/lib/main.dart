@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   )
                 ),
                 color: Colors.red,
-                onPressed: _togglePower,
+                onPressed: _acKapi,
               ),
               RaisedButton(
                 child: Text("#Evde Kal - Kapat Kapıyı",
@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     )
                 ),
                 color: Colors.red,
-                onPressed: _fan,
+                onPressed: _kapaKapi,
               ),
               RaisedButton(
                 child: Text("Sürpriz Buton",
@@ -101,11 +101,11 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void _togglePower() {
+  void _acKapi() {
     widget.channel.write("kapi_Ac\n");
   }
 
-  void _fan() {
+  void _kapaKapi() {
     widget.channel.write("kapi_Kapa\n");
   }
 
